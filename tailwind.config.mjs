@@ -7,7 +7,8 @@ export default {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      "Manor Red": {
+
+      "manor-red": {
         50: "#FAE3E5",
         100: "#F5C2C5",
         200: "#ED848A",
@@ -21,7 +22,7 @@ export default {
         950: "#170204",
       },
 
-      Linen: {
+      linen: {
         50: "#FFFFFF",
         100: "#FCFCFC",
         200: "#F9F9F9",
@@ -30,7 +31,7 @@ export default {
         500: "#F3F3F2",
         600: "#BEBEBD",
         700: "#C1C1BD",
-        800: "##595856",
+        800: "#595856",
         900: "#2E2E2E",
         950: "#1B1B1B",
       },
@@ -55,25 +56,8 @@ export default {
       120: "120px",
     },
 
-    /* Tilføj fonte herunder - husk også at tilføje webfonte i head-sektionen i MainLayout  */
-    fontFamily: {
-      sans: ["Prompt", "sans-serif"],
-      display: ["Courier", "monospace"] /* eksempel på ekstra font */,
-    },
-
-    /* Tilføj dit typografiske hierarki herunder */
-    fontSize: {
-      base: ["1rem", { lineHeight: "1.5rem" }],
-      large: ["2.5rem", { lineHeight: "3.75rem" }],
-    },
-
-    /* Tilføj dit fontvægt-hierarki nedenfor */
-    fontWeight: {
-      light: "100",
-      regular: "400",
-    },
-
     extend: {},
   },
+
   plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms"), require("@tailwindcss/aspect-ratio"), require("@tailwindcss/container-queries")],
 };
