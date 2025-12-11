@@ -1,0 +1,35 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import göholm_about_01 from "../assets/images/about/4x5/göholm_about_01.webp";
+import göholm_about_02 from "../assets/images/about/4x5/göholm_about_02.webp";
+---
+
+<MainLayout title="Titel">
+    <section class="container mx-auto px-4 py-12">
+
+        <h1 class="mb-6">Göholm</h1>
+
+        <!-- Images side-by-side on medium+ screens, stacked on small -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <figure>
+                <img src={göholm_about_01.src} alt="Göholm exterior 1" class="w-full h-64 md:h-80 object-cover" />
+            </figure>
+            <figure>
+                <img src={göholm_about_02.src} alt="Göholm exterior 2" class="w-full h-64 md:h-80 object-cover" />
+            </figure>
+        </div>
+
+        <!-- Text in two columns on medium+ screens, single column on small -->
+        <div class="text-lg leading-relaxed md:columns-2 md:gap-8">
+            <p class="break-inside-avoid">Göholm's history dates back to the early 18th century under the Siöstierna family, and in 1790 Johan af Puke rebuilt the main house as the stately stone manor that forms the foundation of the estate today. For generations, Göholm has been a gathering place for those who value nature, craftsmanship and the calm of an authentic manor setting.</p>
+
+            <p class="break-inside-avoid">The estate is leased with the purpose of maintaining and caring for the property. The lease includes hunting, farmland and buildings, all guided by continuity and respect for the landscape and its heritage.</p>
+
+            <p class="break-inside-avoid">Today, Göholm unites nature, history and active land stewardship. Forests, farmland, hunting, fishing and outdoor experiences are managed with great care for the landscape and the estate's legacy.</p>
+
+            <p class="break-inside-avoid">The combination of natural surroundings and historic architecture creates a setting where past and present meet in balance — and where the spirit of Göholm is defined by simplicity, quiet beauty and a deep sense of place.</p>
+        </div>
+
+    </section>
+
+    </MainLayout>
