@@ -3,44 +3,116 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 
+const { href, target = "_self", title } = Astro.props;
 ---
+<MainLayout title="Contact">
+  <main class="flex justify-center">
+    <div class="w-full max-w-5xl px-8 pt-32 pb-32 text-manor-red-500">
 
-<MainLayout title="Titel">
-    <section class="max-w-2xl">
+      <!--  layout: 2 kolonner -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 mb-24">
 
+        <!-- VENSTRE: CONTACT INTRO -->
+        <section class="space-y-4 max-w-md">
+          <h2 class="uppercase tracking-[0.25em] text-xs">
+            Contact us
+          </h2>
 
-<h2>contact</h2>
-
-<p>Would you like to know more? Your questions are more than welcome. Please feel free to email us at Göholm@.dk,  
-contact us on +45 31 39 30 51 or fill in the form below and we will get back to you as quickly as we can.</p>
+          <p class="text-[12px] leading-relaxed">
+            Would you like to know more? Your questions are more than welcome.
+            Please feel free to email us at Göholm@.dk,
+            contact us on +45 31 39 30 51 or fill in the form below
+            and we will get back to you as quickly as we can.
+          </p>
         </section>
-    <form class="max-w-md mx-auto space-y-4">
-   
-  <div>
-    <label class="block text-xs tracking-widest mb-1 " for="name">
-        <h2>name</h2></label>
-    <input id="full name" type="name" class="border-b [0.5px] border-manor-red-500 p-2 bg-transparent focus:outline-none" />
 
-     <label class="block text-xs tracking-widest mb-1 " for="phone">
-        <h2>phone</h2></label>
-    <input id="phone" type="phone" class="border-b [0.5px] border-manor-red-500 p-2 bg-transparent focus:outline-none" />
- 
-    <label class="block text-xs tracking-widest mb-1 " for="mail*">
-        <h2>mail*</h2></label>
-    <input id="mail*" type="mail*" class="border-b [0.5px] border-manor-red-500 p-2 bg-transparent focus:outline-none" />
+        <!-- HØJRE: FORMULAR -->
+        <form class="space-y-8">
 
-     <label class="block text-xs tracking-widest mb-1 " for="message*">
-        <h2>message*</h2></label>
-    <input id="message*" type="message" class="border-b [0.5px] border-manor-red-500 p-2 bg-transparent focus:outline-none" />
-                
-  </div>
- 
-  <Button/>
+          <!-- NAME + PHONE -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div>
+              <label for="name"
+                class="block uppercase text-[10px] tracking-widest mb-1">
+                Name
+              </label>
+              <input
+                id="name"
+                type="text"
+                class="w-full border-b border-[0.5px] border-manor-red-500
+                       bg-transparent py-1 focus:outline-none text-[12px]"
+              />
+            </div>
 
-</form>
+            <div>
+              <label for="phone"
+                class="block uppercase text-[10px] tracking-widest mb-1">
+                Phone
+              </label>
+              <input
+                id="phone"
+                type="text"
+                class="w-full border-b border-[0.5px] border-manor-red-500
+                       bg-transparent py-1 focus:outline-none text-[12px]"
+              />
+            </div>
+          </div>
 
-<h2>directions</h2>
-<p>We are located 10 km south of Ronneby in Blekinge County. Göholm is strategically situated on the Gö Peninsula along the Blekinge coast.</p>
+          <!-- EMAIL -->
+          <div>
+            <label for="mail"
+              class="block uppercase text-[10px] tracking-widest mb-1">
+              Email*
+            </label>
+            <input
+              id="mail"
+              type="email"
+              class="w-full border-b border-[0.5px] border-manor-red-500
+                     bg-transparent py-1 focus:outline-none text-[12px]"
+            />
+          </div>
 
-<Link title="CLICK HERE FOR DIRECTIONS" href="https://www.google.com/maps/place/G%C3%B6holms+House,+372+94+Listerby,+Sverige/@56.1533277,15.3286061,17z/data=!3m1!4b1!4m6!3m5!1s0x465665342762d6a9:0x89a15b0447168fe7!8m2!3d56.1533277!4d15.3311864!16s%2Fm%2F0crbywr?entry=ttu&g_ep=EgoyMDI1MTIwNy4wIKXMDSoASAFQAw%3D%3D"/>
-    </MainLayout>
+          <!-- MESSAGE -->
+          <div>
+            <label for="message"
+              class="block uppercase text-[10px] tracking-widest mb-1">
+              Message*
+            </label>
+            <textarea
+              id="message"
+              rows="3"
+              class="w-full border-b border-[0.5px] border-manor-red-500
+                     bg-transparent py-1 resize-none focus:outline-none text-[12px]"
+            ></textarea>
+          </div>
+
+          <div class="pt-2">
+            <Button />
+          </div>
+        </form>
+      </div>
+
+      <!-- DIRECTIONS UNDER FORM -->
+      <section class="max-w-md">
+        <h2 class="uppercase tracking-[0.25em] text-xs mb-4">
+          Directions
+        </h2>
+
+        <p class="text-[12px] leading-relaxed">
+          We are located 10 km south of Ronneby in Blekinge County.
+        </p>
+
+        <p class="text-[12px] leading-relaxed mb-6">
+          Göholm is strategically situated on the Gö Peninsula along the Blekinge coast.
+        </p>
+
+        <Link
+          title="CLICK HERE FOR DIRECTIONS"
+          href="https://www.google.com/maps/place/G%C3%B6holms+House,+372+94+Listerby,+Sverige/@56.1533277,15.3286061,17z/data=!3m1!4b1!4m6!3m5!1s0x465665342762d6a9:0x89a15b0447168fe7!8m2!3d56.1533277!4d15.3311864!16s%2Fm%2F0crbywr"
+        />
+      </section>
+
+    </div>
+  </main>
+</MainLayout>
+
