@@ -1,54 +1,44 @@
----
-import "../styles/tailwind.css";
----
+<footer class="bg-linen-500 text-manor-red-500 w-full pt-40 pb-4">
+  <div class="px-24 md:px-40">
 
-<footer class="bg-linen-500 text-manor-red-500 w-full border-t border-manor-red-500 pt-16 pb-16">
-  <div class="max-w-screen-xl mx-auto px-6 md:px-8">
+    <!-- DESKTOP -->
+    <div class="hidden md:flex justify-between items-end tracking-[0.15em] uppercase text-[14px] font-serif">
 
-    <!-- Desktop Layout -->
-    <div class="hidden md:flex justify-between items-end tracking-[0.15em]">
+      <!-- Venstre: Spotify -->
+      <a href="#" class="underline hover:opacity-60 transition leading-none pb-[2px]">
+        Spotify
+      </a>
 
-      <div class="uppercase font-[baskerville]">
-        <a href="#" class="underline hover:opacity-60 transition">
-          Spotify
-        </a>
-      </div>
-
-      <div class="text-center tracking-[0]">
-        <p class="tracking-[0.15em]">
+      <!-- Center: Adresse -->
+      <div class="text-center normal-case tracking-[0] font-sans text-[12px] leading-none">
+        <p class="tracking-[0.15em] leading-none">
           Göholm House
         </p>
-        <p>
+        <p class="leading-none">
           372 94 Listerby, Sverige
         </p>
       </div>
 
-      <div class="uppercase font-[baskerville]">
-        <a href="#" class="underline hover:opacity-60 transition">
-          LinkedIn
-        </a>
-      </div>
+      <!-- Højre: LinkedIn -->
+      <a href="#" class="underline hover:opacity-60 transition leading-none pb-[2px]">
+        LinkedIn
+      </a>
     </div>
 
-    <!-- Mobile Layout -->
-    <div class="md:hidden flex justify-between items-start mt-8">
-
-      <!-- Left column: links stacked -->
-      <div class="flex flex-col space-y-4 text-[14px] tracking-[0.15em] uppercase font-[baskerville]">
-        <a href="#" class="underline hover:opacity-60 transition">
-          Spotify
-        </a>
-        <a href="#" class="underline hover:opacity-60 transition">
-          LinkedIn
-        </a>
+    <!-- MOBILE -->
+    <div class="md:hidden mt-40 flex justify-between items-start">
+      <!-- Links venstre -->
+      <div class="flex flex-col space-y-16 text-[12px] tracking-[0.15em] uppercase font-serif leading-none">
+        <a href="#" class="underline hover:opacity-60 transition">Spotify</a>
+        <a href="#" class="underline hover:opacity-60 transition">LinkedIn</a>
       </div>
 
-      <!-- Right column: address -->
-      <div class="text-right text-[14px] tracking-[0] font-light">
-        <p class="uppercase font-[baskerville] tracking-[0.15em]">
+      <!-- Adresse højre -->
+      <div class="text-right text-[12px] font-sans tracking-[0] leading-none">
+        <p class="tracking-[0.15em] leading-none">
           Göholm House
         </p>
-        <p>
+        <p class="leading-none">
           372 94 Listerby, Sverige
         </p>
       </div>
@@ -56,3 +46,4 @@ import "../styles/tailwind.css";
 
   </div>
 </footer>
+

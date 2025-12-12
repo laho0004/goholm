@@ -1,9 +1,83 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 
+import heroImage from "../assets/images/landing/16x9/göholm_hero.webp";
+import chamberImgLeft from "../assets/images/landing/4x5/göholm_chamber04_01.webp";
+import chamberImgRight from "../assets/images/landing/4x5/göholm_chamber04_02.webp";
 ---
-<MainLayout title="Titel">
-    <h1>hej</h1>
-    <h2>hej</h2>
-    <p>hej</p>
+
+<MainLayout title="Göholm House" fullWidth={true}>
+  <!-- HERO – kant til kant -->
+  <section class="w-full">
+    <div class="relative h-[80vh]">
+      <img
+        src={heroImage.src}
+        alt="Göholm exterior"
+        class="w-full h-full object-cover"
+      />
+
+      <!-- Link-tekst overlay -->
+      <a
+        href="/facilities"
+        class="absolute inset-0 flex items-center justify-center"
+      >
+        <span
+          class="text-linen-200 text-[14px] md:text-[16px] tracking-[0.3em] font-serif underline underline-offset-4 hover:opacity-70 transition"
+        >
+          Discover our facilities
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- TO STORE BILLEDER SIDE OM SIDE -->
+  <section class="px-24 md:px-40 pt-80 pb-80">
+    <div class="grid md:grid-cols-2 gap-24 items-start">
+      <!-- Venstre billede -->
+      <div class="aspect-[4/5]">
+        <img
+          src={chamberImgLeft.src}
+          alt="Göholm interior"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Højre: billede + tekst -->
+      <div class="flex flex-col gap-32">
+        <div class="aspect-[4/5]">
+          <img
+            src={chamberImgRight.src}
+            alt="Göholm chambers"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Tekst med 24px spacing -->
+        <div class="flex flex-col gap-24 max-w-[420px]">
+          <h1>Our chambers</h1>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus
+            rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat.
+          </p>
+
+          <a
+            href="/chambers"
+            class="text-manor-red-500 text-[14px] tracking-[0.15em] underline underline-offset-4 hover:opacity-70 transition"
+          >
+            Read more
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMBLEM CENTRERET NEDERST -->
+  <section class="py-80">
+    <div class="flex justify-center">
+      <!-- Placeholder emblem -->
+      <div class="w-64 h-64 rounded-full border border-manor-red-500" />
+    </div>
+  </section>
 </MainLayout>

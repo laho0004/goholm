@@ -1,6 +1,4 @@
 ---
-import "../styles/tailwind.css";
-
 const menuItems = [
   { name: "ABOUT", href: "/about" },
   { name: "CHAMBERS", href: "/chambers" },
@@ -11,10 +9,11 @@ const menuItems = [
 ---
 
 <header class="bg-linen-500 text-manor-red-500 w-full fixed top-0 left-0 z-50">
-  <div class="max-w-screen-xl mx-auto px-6 md:px-8 pt-32 pb-16 flex flex-col items-center">
-
+  <div
+    class="max-w-screen-xl mx-auto px-24 md:px-40 pt-32 pb-24 flex flex-col items-center"
+  >
     <!-- Logo -->
-    <a href="/" class="mb-16">
+    <a href="/" class="mb-24">
       <img
         src="/logo.svg"
         alt="Göholm Logo"
@@ -23,45 +22,9 @@ const menuItems = [
     </a>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden md:flex space-x-32 text-[18px] tracking-[0.15em] uppercase font-[baskerville]">
-      {menuItems.map((item) => (
-        <a href={item.href} class="hover:opacity-60 transition">
-          {item.name}
-        </a>
-      ))}
-      <a href="#contact" class="hover:opacity-60 transition">
-        CONTACT
-      </a>
-    </nav>
-
-    <!-- Mobile top row: burger left, CONTACT right -->
-    <div class="w-full flex items-center justify-between md:hidden mt-12">
-
-      <!-- Burger icon -->
-      <button
-        id="mobile-menu-btn"
-        type="button"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        class="flex flex-col justify-center gap-1 ml-1"
-      >
-        <span class="w-8 h-[2px] bg-manor-red-500 block"></span>
-        <span class="w-8 h-[2px] bg-manor-red-500 block"></span>
-      </button>
-
-      <!-- CONTACT stays on the right -->
-      <a
-        href="#contact"
-        class="text-[18px] tracking-[0.15em] uppercase font-[baskerville] mr-1"
-      >
-        CONTACT
-      </a>
-    </div>
-
-    <!-- Mobile menu: items stacked under logo -->
     <nav
-      id="mobile-menu"
-      class="hidden md:hidden mt-10 flex flex-col items-center space-y-4 text-[18px] tracking-[0.15em] uppercase font-[baskerville]"
+      class="hidden md:flex gap-40 text-[14px] tracking-[0.15em] uppercase font-serif"
+      aria-label="Main navigation"
     >
       {menuItems.map((item) => (
         <a href={item.href} class="hover:opacity-60 transition">
@@ -70,10 +33,46 @@ const menuItems = [
       ))}
     </nav>
 
+    <!-- Mobile top row: burger left, CONTACT right -->
+    <div class="w-full flex items-center justify-between md:hidden mt-16">
+      <!-- Burger icon -->
+      <button
+        id="mobile-menu-btn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Toggle navigation"
+        class="flex flex-col justify-center gap-2 ml-1"
+      >
+        <span class="w-8 h-[2px] bg-manor-red-500 block"></span>
+        <span class="w-8 h-[2px] bg-manor-red-500 block"></span>
+      </button>
+
+      <!-- CONTACT link on the right (behold #contact hvis I scroller ned til sektion) -->
+      <a
+        href="#contact"
+        class="text-[18px] tracking-[0.15em] uppercase font-serif mr-1"
+      >
+        CONTACT
+      </a>
+    </div>
+
+    <!-- Mobile menu: items stacked under logo -->
+    <nav
+      id="mobile-menu"
+      class="hidden md:hidden mt-16 flex flex-col items-center space-y-8 text-[18px] tracking-[0.15em] uppercase font-serif"
+      aria-label="Mobile navigation"
+    >
+      {menuItems.map((item) => (
+        <a href={item.href} class="hover:opacity-60 transition">
+          {item.name}
+        </a>
+      ))}
+    </nav>
   </div>
 
   <!-- Script: toggle mobile menu -->
-  <script>
+  <script is:inline>
     if (typeof window !== "undefined") {
       window.addEventListener("DOMContentLoaded", () => {
         const btn = document.getElementById("mobile-menu-btn");
@@ -89,3 +88,4 @@ const menuItems = [
     }
   </script>
 </header>
+

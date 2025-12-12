@@ -3,11 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+  /* Global body styles */
+  body {
+    background-color: #f3f3f2; /* linen-500 */
+    color: #481619; /* manor-red-500 */
+    -webkit-font-smoothing: antialiased;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* TYPOGRAFI – DESKTOP / DEFAULT */
+
   h1 {
-    font-size: 36px;
-    font-family: baskerville, serif;
+    font-size: 24px;
+    font-family: "Libre Baskerville", Baskerville, serif;
     font-weight: 400;
-    text-transform: uppercase;
     letter-spacing: 0.15em;
     color: #481619;
   }
@@ -28,7 +37,7 @@
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
     letter-spacing: 0.05em;
@@ -36,20 +45,24 @@
     color: #481619;
   }
 
+  /* MOBIL-TILPASNINGER */
   @media (max-width: 768px) {
     h1 {
       font-size: 28px;
       letter-spacing: 0.15em;
     }
+
     h2 {
       font-size: 16px;
     }
+
     h3 {
       font-size: 14px;
     }
+
     p {
       font-size: 16px;
-      line-height: 15px;
+      line-height: 22px; /* lidt mere luft for læsbarhed */
     }
   }
 }

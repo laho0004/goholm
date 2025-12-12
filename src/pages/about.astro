@@ -1,35 +1,119 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import göholm_about_01 from "../assets/images/about/4x5/göholm_about_01.webp";
-import göholm_about_02 from "../assets/images/about/4x5/göholm_about_02.webp";
+import aboutImg1 from "../assets/images/about/4x5/göholm_about_01.webp";
+import aboutImg2 from "../assets/images/about/4x5/göholm_about_02.webp";
 ---
 
-<MainLayout title="Titel">
-    <section class="container mx-auto px-4 py-12">
-
-        <h1 class="mb-6">Göholm</h1>
-
-        <!-- Images side-by-side on medium+ screens, stacked on small -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            <figure>
-                <img src={göholm_about_01.src} alt="Göholm exterior 1" class="w-full h-64 md:h-80 object-cover" />
-            </figure>
-            <figure>
-                <img src={göholm_about_02.src} alt="Göholm exterior 2" class="w-full h-64 md:h-80 object-cover" />
-            </figure>
+<MainLayout title="Göholm">
+  <section class="py-80">
+    <!-- Centralt content-område, samme for alle undersider -->
+    <div class="max-w-[960px] mx-auto">
+      
+      <!-- Billeder øverst -->
+      <div class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-32 items-start mb-80">
+        <!-- Venstre: stort billede -->
+        <div class="aspect-[4/5]">
+          <img
+            src={aboutImg1.src}
+            alt="Göholm exterior"
+            class="w-full h-full object-cover"
+          />
         </div>
 
-        <!-- Text in two columns on medium+ screens, single column on small -->
-        <div class="text-lg leading-relaxed md:columns-2 md:gap-8">
-            <p class="break-inside-avoid">Göholm's history dates back to the early 18th century under the Siöstierna family, and in 1790 Johan af Puke rebuilt the main house as the stately stone manor that forms the foundation of the estate today. For generations, Göholm has been a gathering place for those who value nature, craftsmanship and the calm of an authentic manor setting.</p>
+        <!-- Højre: mindre billede -->
+        <div class="aspect-[4/5] md:mt-32">
+          <img
+            src={aboutImg2.src}
+            alt="Göholm details"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
 
-            <p class="break-inside-avoid">The estate is leased with the purpose of maintaining and caring for the property. The lease includes hunting, farmland and buildings, all guided by continuity and respect for the landscape and its heritage.</p>
+      <!-- Titel + brødtekst -->
+      <div class="mb-80">
+        <h1 class="mb-32">Göholm</h1>
 
-            <p class="break-inside-avoid">Today, Göholm unites nature, history and active land stewardship. Forests, farmland, hunting, fishing and outdoor experiences are managed with great care for the landscape and the estate's legacy.</p>
+        <div class="grid md:grid-cols-2 gap-32">
+          <p>
+            Göholm's history dates back to the early 18th century under the
+            Siöstierna family, and in 1790 Johan af Puke rebuilt the main house
+            as the stately stone manor that forms the foundation of the estate
+            today. For generations, Göholm has been a gathering place for those
+            who value nature, craftsmanship and the calm of an authentic manor
+            setting.
+          </p>
 
-            <p class="break-inside-avoid">The combination of natural surroundings and historic architecture creates a setting where past and present meet in balance — and where the spirit of Göholm is defined by simplicity, quiet beauty and a deep sense of place.</p>
+          <p>
+            The estate is leased with the purpose of maintaining and caring for
+            the property. The lease includes hunting, farmland and buildings,
+            all guided by continuity and respect for the landscape and its
+            heritage.
+          </p>
+
+          <p>
+            Today, Göholm unites nature, history and active land stewardship.
+            Forests, farmland, hunting, fishing and outdoor experiences are
+            managed with great care for the landscape and the estate's legacy.
+          </p>
+
+          <p>
+            The combination of natural surroundings and historic architecture
+            creates a setting where past and present meet in balance — and
+            where the spirit of Göholm is defined by simplicity, quiet beauty
+            and a deep sense of place.
+          </p>
+        </div>
+      </div>
+
+      <!-- Fire info-blokke nederst -->
+      <div class="grid md:grid-cols-2 gap-32">
+        <!-- 01 -->
+        <div class="max-w-[420px]">
+          <h2 class="mb-1">The Manor House</h2>
+          <h2 class="mb-16">01</h2>
+          <p>
+            The heart of Göholm: a restored manor with hotel-standard rooms,
+            shared lounges and spaces used for gatherings, events and
+            traditional hunts.
+          </p>
         </div>
 
-    </section>
+        <!-- 02 -->
+        <div class="max-w-[420px]">
+          <h2 class="mb-1">Accommodation</h2>
+          <h2 class="mb-16">02</h2>
+          <p>
+            The Manor House with three floors of guest rooms and living areas as
+            well as the Inspector's House with four bedrooms, living room,
+            dining room and a fully equipped kitchen.
+          </p>
+        </div>
 
-    </MainLayout>
+        <!-- 03 -->
+        <div class="max-w-[420px]">
+          <h2 class="mb-1">Experiences</h2>
+          <h2 class="mb-16">03</h2>
+          <p>
+            Hunting, fishing, nature walks, golf, ATV/UTV driving — full access
+            to the estate's landscape.
+          </p>
+        </div>
+
+        <!-- 04 -->
+        <div class="max-w-[420px]">
+          <h2 class="mb-1">Services</h2>
+          <h2 class="mb-16">04</h2>
+          <p>
+            Hosted dinners, retreats, meetings and professional guest
+            management for both private and corporate stays.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+
+
+
