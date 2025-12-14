@@ -1,7 +1,120 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import ChamberImg1 from "../assets/images/chambers/4x5/göholm_chamber1_01.webp";
+import ChamberImg2 from "../assets/images/chambers/4x5/göholm_chamber1_02.webp";
+import ChamberImg3 from "../assets/images/chambers/4x5/göholm_chamber2_01.webp";
+import ChamberImg4 from "../assets/images/chambers/4x5/göholm_chamber2_02.webp";
+import ChamberImg5 from "../assets/images/chambers/4x5/göholm_chamber2_03.webp";
+import ChamberImg6 from "../assets/images/chambers/4x5/göholm_chamber3_01.webp";
+import ChamberImg7 from "../assets/images/chambers/4x5/göholm_chamber3_02.webp";
 ---
 
 <MainLayout title="Chambers">
-  
+  <section class="py-80">
+    <div class="max-w-[960px] mx-auto">
+
+      <!-- CHAMBER 01: IMAGES -->
+      <div class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-32 items-start mb-32">
+        <div class="aspect-[4/5]">
+          <img
+            src={ChamberImg1.src}
+            alt="Chamber 01 - image 1"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="aspect-[4/5] md:mt-32">
+          <img
+            src={ChamberImg2.src}
+            alt="Chamber 01 - image 2"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- CHAMBER 01: TEXT (under left image) -->
+      <div class="max-w-[420px] mb-80">
+        <h1 class="mb-16">Chamber</h1>
+        <h2 class="mb-32 text-[12px] tracking-[0.25em]">01</h2>
+        <p>
+          A serene double room furnished with original antiques and refined
+          details. Soft patterned walls echo the manor’s history and create a
+          quiet atmosphere. The en-suite bathroom adds comfort and ease to an
+          interior shaped by craftsmanship, character and time.
+        </p>
+      </div>
+
+      <!-- CHAMBER 02: TEXT LEFT + IMAGE RIGHT -->
+      <div class="grid md:grid-cols-2 gap-32 items-start mb-80">
+        <div class="max-w-[420px]">
+          <h1 class="mb-16">Chamber</h1>
+          <h2 class="mb-32 text-[12px] tracking-[0.25em]">02</h2>
+          <p>
+            Warm gold accents and a generous double bed create a quietly luxurious
+            atmosphere. The room blends traditional detailing with contemporary
+            ease, while the private bathroom ensures comfort, relaxation and a
+            sense of privacy throughout the stay.
+          </p>
+        </div>
+
+        <div class="max-w-[420px] justify-self-end">
+          <div class="aspect-[4/5]">
+            <img
+              src={ChamberImg3.src}
+              alt="Chamber 02 - image 1"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- CHAMBER 02: IMAGES (large left + small right) -->
+      <div class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-32 items-start mb-80">
+        <div class="aspect-[4/5]">
+          <img
+            src={ChamberImg4.src}
+            alt="Chamber 02 - image 2"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="aspect-[4/5] md:mt-32">
+          <img
+            src={ChamberImg5.src}
+            alt="Chamber 02 - image 3"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- CHAMBER 03: TWO IMAGES SIDE BY SIDE -->
+      <div class="grid md:grid-cols-2 gap-32 items-start mb-80">
+        <div class="aspect-[4/5]">
+          <img
+            src={ChamberImg6.src}
+            alt="Chamber 03 - image 1"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="aspect-[4/5]">
+          <img
+            src={ChamberImg7.src}
+            alt="Chamber 03 - image 2"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+    </div>
+  </section>
 </MainLayout>
+
+

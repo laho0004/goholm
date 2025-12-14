@@ -1,7 +1,410 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import diningImg1 from "../assets/images/facilities/4x5/göholm_dining_01.webp";
+import diningImg2 from "../assets/images/facilities/4x5/göholm_dining_02.webp";
+import diningImg3 from "../assets/images/facilities/4x5/göholm_dining_03.webp";
+import diningImg4 from "../assets/images/facilities/7x5/göholm_dining_004.webp";
+
+import kitchenImg1 from "../assets/images/facilities/5x7/göholm_kitchen_01.webp";
+
+import fireplaceImg1 from "../assets/images/facilities/5x7/göholm_fireplace_01.webp";
+import fireplaceImg2 from "../assets/images/facilities/5x7/göholm_fireplace_02.webp";
+import fireplaceImg3 from "../assets/images/facilities/4x5/göholm_fireplace_03.webp";
+
+import pianoImg1 from "../assets/images/facilities/4x5/göholm_piano_01.webp";
+import pianoImg2 from "../assets/images/facilities/4x5/göholm_piano_02.webp";
+
+import staircaseImg1 from "../assets/images/facilities/4x5/göholm_staircase_01.webp";
+import staircaseImg2 from "../assets/images/facilities/4x5/göholm_staircase_02.webp";
+import staircaseImg3 from "../assets/images/facilities/5x7/göholm_staircase_03.webp";
+import staircaseImg4 from "../assets/images/facilities/7x5/göholm_staircase_04.webp";
+
+import barImg1 from "../assets/images/facilities/4x5/göholm_bar_01.webp";
+import barImg2 from "../assets/images/facilities/4x5/göholm_bar_02.webp";
 ---
 
 <MainLayout title="Facilities">
-  
+  <section class="py-80">
+    <div class="max-w-[960px] mx-auto">
+      <!-- HERO: IMAGE LEFT + TITLE RIGHT (BOTTOM ALIGNED) -->
+      <div class="grid md:grid-cols-2 gap-32 items-stretch mb-80">
+        <div class="aspect-[5/7]">
+          <img
+            src={diningImg1.src}
+            alt="Göholm dining area"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex flex-col justify-end max-w-[420px]">
+          <h1 class="mb-16">Facilities</h1>
+          <h3>the comfort within Göholm</h3>
+        </div>
+      </div>
+
+      <!-- DINING ROOM TEXT -->
+      <div class="mb-80">
+        <h2 class="mb-16">Dining Room</h2>
+
+        <div class="grid md:grid-cols-2 gap-32">
+          <p>
+            Dining at Göholm unfolds across two distinct rooms, each carrying its
+            own quiet charm. The grand dining hall seats sixteen and is laid with
+            beautifully preserved, traditional tableware — a setting made for
+            long meals, conversation and the gentle formality of the manor’s
+            heritage.
+          </p>
+        </div>
+      </div>
+
+      <!-- IMAGE LEFT (LARGE) + IMAGE RIGHT (SMALL) -->
+      <div
+        class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-32 items-start mb-80"
+      >
+        <div class="aspect-[5/7]">
+          <img
+            src={diningImg2.src}
+            alt="Dining room at Göholm"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="md:mt-32 max-w-[420px]">
+          <div class="aspect-[4/5]">
+            <img
+              src={diningImg3.src}
+              alt="Dining area glassware"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- DINING 04: CENTERED IMAGE + TEXT UNDER -->
+      <div class="max-w-[640px] mx-auto mb-80">
+        <div class="aspect-[4/5]">
+          <img
+            src={diningImg4.src}
+            alt="Smaller adjoining dining room"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="mt-32 max-w-[420px]">
+          <p class="mb-16">
+            Next to the grand dining room is a smaller adjoining space, ideal for
+            breakfast or a light lunch. With classic cabinetry and ample counter
+            space, it supports the home’s daily rhythm. Nearby, the breakfast
+            room offers a more intimate setting with a single table for coffee,
+            light meals, or quiet moments.
+          </p>
+
+          <p>
+            Together, these rooms extend the dining experience at Göholm, adding
+            comfort and privacy to the grandeur of the manor’s formal hall.
+          </p>
+        </div>
+      </div>
+
+      <!-- KITCHEN: IMAGE LEFT + TEXT RIGHT (vertically centered) -->
+      <div class="grid md:grid-cols-2 gap-32 items-stretch mb-80">
+        <div class="aspect-[4/5]">
+          <img
+            src={kitchenImg1.src}
+            alt="Kitchen at Göholm"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center max-w-[420px]">
+          <h2 class="mb-16">Kitchen</h2>
+
+          <p class="mb-16">
+            The kitchens at Göholm support the rhythm of the house with spaces
+            designed for both daily use and larger gatherings. On the ground
+            floor, the fully equipped main kitchen provides room for generous
+            cooking and shared preparation.
+          </p>
+
+          <p class="mb-16">
+            On the dining floor, a dedicated serving kitchen offers a bright and
+            functional area for arranging meals before they reach the table,
+            allowing preparation and service to flow seamlessly.
+          </p>
+
+          <p>
+            Together, these kitchens reflect the manor’s practical and welcoming
+            character, shaped by tradition and the gentle pace of everyday life.
+          </p>
+        </div>
+      </div>
+
+      <!-- FIREPLACE: CENTERED IMAGE + TEXT UNDER -->
+      <div class="mb-80">
+        <div class="max-w-[420px] mx-auto">
+          <div class="aspect-[5/7]">
+            <img
+              src={fireplaceImg1.src}
+              alt="Fireplace room at Göholm"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="mt-32">
+          <h2 class="mb-16">Fireplace</h2>
+
+          <div class="grid md:grid-cols-2 gap-32">
+            <p>
+              The fireplace room is one of the manor’s most atmospheric spaces,
+              shaped by soft light, deep colours and the quiet presence of books
+              and well-worn furniture. Two large sofas gather around a low marble
+              table, where candlelight reflects gently across its surface and
+              creates a calm setting for long conversations. The built-in
+              bookcases, filled with volumes collected over generations, soften
+              the room and give it a sense of continuity and lived-in character.
+              At the far end, the restored fireplace warms the space for relaxed
+              evenings together.
+            </p>
+
+            <div>
+              <p class="mb-16">
+                The glow from the fire blends with the room’s darker tones,
+                creating a sense of intimacy and ease that unfolds naturally as
+                the evening progresses.
+              </p>
+
+              <p>
+                The fireplace room sits just beyond the small bar salon, allowing
+                movement between the two spaces to feel unhurried and harmonious.
+                Together, they form a sequence of rooms made for gathering,
+                lingering and enjoying the quiet rhythm of the manor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FIREPLACE: IMAGE LEFT (LARGE) + IMAGE RIGHT (SMALL) -->
+      <div
+        class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-32 items-start mb-80"
+      >
+        <div class="aspect-[5/7]">
+          <img
+            src={fireplaceImg2.src}
+            alt="Fireplace room at Göholm - 2"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="md:mt-32 max-w-[420px]">
+          <div class="aspect-[4/5]">
+            <img
+              src={fireplaceImg3.src}
+              alt="Fireplace room at Göholm - 3"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- PIANO: TWO IMAGES SIDE BY SIDE + TEXT UNDER -->
+      <div class="mb-80">
+        <div class="grid md:grid-cols-2 gap-32 items-start">
+          <div class="aspect-[4/5]">
+            <img
+              src={pianoImg1.src}
+              alt="Piano room at Göholm - 1"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="aspect-[4/5]">
+            <img
+              src={pianoImg2.src}
+              alt="Piano room at Göholm - 2"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="mt-32">
+          <h2 class="mb-16">PIANO ROOM</h2>
+
+          <div class="grid md:grid-cols-2 gap-32">
+            <div>
+              <p class="mb-32">
+                The piano room is a bright and spacious setting where music, play
+                and relaxation come together. The dark, classic piano stands as a
+                natural focal point, surrounded by large windows that draw in
+                daylight and give the room a calm, open atmosphere.
+              </p>
+
+              <p>
+                A generous sofa creates a relaxed area around a low table, where
+                a backgammon board often lies ready for quiet breaks and unhurried
+                moments.
+              </p>
+            </div>
+
+            <div>
+              <p class="mb-32">
+                The room has a light and social character, connected both to the
+                main dining room and to the small bar just a few steps away.
+              </p>
+
+              <p>
+                Its open layout makes it a natural gathering place in the house,
+                a space for playing a game, listening to music or simply gazing
+                out at the landscape through the tall windows. The room feels
+                both informal and atmospheric, carrying the same quiet rhythm
+                that defines the manor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAIRCASE: TWO SMALL IMAGES SIDE BY SIDE -->
+      <div class="grid md:grid-cols-2 gap-32 items-start mb-80">
+        <div class="max-w-[420px]">
+          <div class="aspect-[4/5]">
+            <img
+              src={staircaseImg1.src}
+              alt="Staircase - 01"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <div class="max-w-[420px]">
+          <div class="aspect-[4/5]">
+            <img
+              src={staircaseImg2.src}
+              alt="Staircase - 02"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- CENTRAL STAIR: IMAGE LEFT + TEXT RIGHT (centered) -->
+      <div class="grid md:grid-cols-2 gap-32 items-stretch mb-80">
+        <div class="aspect-[5/7]">
+          <img
+            src={staircaseImg3.src}
+            alt="The central stair at Göholm"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="flex flex-col justify-center max-w-[420px]">
+          <h2 class="mb-16">THE CENTRAL STAIR</h2>
+
+          <p class="mb-16">
+            The main staircase forms one of the manor’s quiet transitions between
+            the rooms. From both the fireplace lounge and the dining room, the
+            staircase opens into a bright landing, where tall windows bring in
+            soft daylight and highlight the dark, carved wood of the balustrade.
+            The space carries a sense of movement and calm at the same time,
+            shaped by old portraits, small details and the gentle echoes of the
+            house.
+          </p>
+
+          <p>
+            From here, the stairs lead down to the entrance hall and up to the
+            floor above, where the bedrooms and an additional sitting room are
+            located. A vintage record player stands on the landing, adding a
+            touch of character and reminding visitors of the house’s layered
+            history. The staircase connects the manor’s social spaces with its
+            quieter private rooms and gives a natural rhythm to the way the house
+            is lived in.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vinyl player - staircase 4 (centered) -->
+    <div class="max-w-[640px] mx-auto mb-80">
+      <div class="aspect-[7/5]">
+        <img
+          src={staircaseImg4.src}
+          alt="Vinyl player at Göholm"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- BAR: TWO IMAGES SIDE BY SIDE + TEXT UNDER) -->
+    <div class="max-w-[960px] mx-auto mb-80">
+      <!-- images -->
+      <div class="grid md:grid-cols-2 gap-32 items-start mb-32">
+        <div class="aspect-[4/5]">
+          <img
+            src={barImg1.src}
+            alt="Bar room at Göholm - 1"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="aspect-[4/5]">
+          <img
+            src={barImg2.src}
+            alt="Bar room at Göholm - 2"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+     <div class="mt-32">
+    <h2 class="mb-16">BAR CORNER</h2>
+
+    <div class="grid md:grid-cols-2 gap-32">
+      <!-- Left column -->
+      <div>
+        <p class="mb-32">
+          The bar sits in a light, decorative room marked by hand-painted wall
+          panels and an antique chest of drawers that now serves as a
+          characterful drinks cabinet. The bottles are arranged informally, as
+          if ready for guests to mix a drink before settling in for the evening.
+        </p>
+
+        <p>
+          From here, the room opens directly into the large fireplace lounge,
+          creating a gentle transition from brightness and detail to a deeper,
+          more intimate atmosphere.
+        </p>
+      </div>
+
+      <!-- Right column -->
+      <div>
+        <p class="mb-32">
+          In the evenings, the bar becomes a natural gathering point. The space
+          reflects the manor’s mix of tradition and ease, elegant in its details
+          but warm and lived-in in its mood.
+        </p>
+      </div>
+      </div>
+    </div>
+  </section>
 </MainLayout>
+
+
+
+
