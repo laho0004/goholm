@@ -9,69 +9,113 @@ const menuItems = [
 ---
 
 <header class="bg-linen-500 text-manor-red-500 w-full fixed top-0 left-0 z-50">
-  <div
-    class="max-w-screen-xl mx-auto px-24 md:px-40 pt-32 pb-24 flex flex-col items-center"
-  >
-    <!-- Logo -->
-    <a href="/" class="mb-24">
-      <img
-        src="/logo.svg"
-        alt="Göholm Logo"
-        class="h-24 w-auto"
-      />
-    </a>
-
-    <!-- Desktop Navigation -->
-    <nav
-      class="hidden md:flex gap-40 text-[14px] tracking-[0.15em] uppercase font-serif"
-      aria-label="Main navigation"
-    >
-      {menuItems.map((item) => (
-        <a href={item.href} class="hover:opacity-60 transition">
-          {item.name}
-        </a>
-      ))}
-    </nav>
-
-    <!-- Mobile top row: burger left, CONTACT right -->
-    <div class="w-full flex items-center justify-between md:hidden mt-16">
-      <!-- Burger icon -->
-      <button
-        id="mobile-menu-btn"
-        type="button"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        aria-label="Toggle navigation"
-        class="flex flex-col justify-center gap-2 ml-1"
-      >
-        <span class="w-8 h-[2px] bg-manor-red-500 block"></span>
-        <span class="w-8 h-[2px] bg-manor-red-500 block"></span>
-      </button>
-
-      <!-- CONTACT link on the right (behold #contact hvis I scroller ned til sektion) -->
-      <a
-        href="#contact"
-        class="text-[18px] tracking-[0.15em] uppercase font-serif mr-1"
-      >
-        CONTACT
+  <div class="max-w-screen-xl mx-auto px-24 md:px-40 pt-24 pb-24">
+    <!-- DESKTOP (samme som før: logo + nav under) -->
+    <div class="hidden md:flex flex-col items-center">
+      <a href="/" class="mb-24">
+        <img src="/logo.svg" alt="Göholm Logo" class="h-24 w-auto" />
       </a>
+
+      <nav
+        class="flex gap-40 text-[14px] tracking-[0.15em] uppercase font-serif"
+        aria-label="Main navigation"
+      >
+        {menuItems.map((item) => (
+          <a href={item.href} class="hover:opacity-60 transition">
+            {item.name}
+          </a>
+        ))}
+      </nav>
     </div>
 
-    <!-- Mobile menu: items stacked under logo -->
-    <nav
-      id="mobile-menu"
-      class="hidden md:hidden mt-16 flex flex-col items-center space-y-8 text-[18px] tracking-[0.15em] uppercase font-serif"
-      aria-label="Mobile navigation"
-    >
-      {menuItems.map((item) => (
-        <a href={item.href} class="hover:opacity-60 transition">
-          {item.name}
+    <!-- MOBILE (burger | logo | contact) -->
+    <div class="md:hidden">
+      <!-- 3 kolonner: venstre/højre lige brede => logo står præcist centreret -->
+      <div class="grid grid-cols-[1fr_auto_1fr] items-center">
+        <!-- LEFT: Burger (Tekla-style) -->
+        <div class="flex items-center">
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Toggle navigation"
+            class="burger-btn"
+          >
+            <span class="burger-line line-1"></span>
+            <span class="burger-line line-2"></span>
+          </button>
+        </div>
+
+        <!-- CENTER: Logo -->
+        <a href="/" class="justify-self-center">
+          <img src="/logo.svg" alt="Göholm Logo" class="h-24 w-auto" />
         </a>
-      ))}
-    </nav>
+
+        <!-- RIGHT: CONTACT -->
+        <div class="flex items-center justify-end">
+          <a
+            href="#contact"
+            class="text-[18px] tracking-[0.15em] uppercase font-serif hover:opacity-60 transition"
+          >
+            CONTACT
+          </a>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <nav
+        id="mobile-menu"
+        class="hidden mt-24 flex flex-col items-center space-y-12 text-[18px] tracking-[0.15em] uppercase font-serif"
+        aria-label="Mobile navigation"
+      >
+        {menuItems.map((item) => (
+          <a href={item.href} class="hover:opacity-60 transition">
+            {item.name}
+          </a>
+        ))}
+      </nav>
+    </div>
   </div>
 
-  <!-- Script: toggle mobile menu -->
+  <!-- Burger styling + animation (MINDRE VERSION) -->
+  <style is:inline>
+    .burger-btn{
+      /* meget subtil størrelse */
+      width: 36px;
+      height: 14px;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .burger-line{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 1.5px; /* tyndere linjer */
+      background: currentColor;
+      transform-origin: center;
+      transition: transform 220ms ease, top 220ms ease, opacity 220ms ease;
+    }
+
+    .line-1{ top: 3px; }
+    .line-2{ top: 9px; }
+
+    /* Open state -> lille, elegant X */
+    .burger-btn.is-open .line-1{
+      top: 6px;
+      transform: rotate(45deg);
+    }
+    .burger-btn.is-open .line-2{
+      top: 6px;
+      transform: rotate(-45deg);
+    }
+  </style>
+
+  <!-- Script: toggle mobile menu + animate burger -->
   <script is:inline>
     if (typeof window !== "undefined") {
       window.addEventListener("DOMContentLoaded", () => {
@@ -80,12 +124,16 @@ const menuItems = [
         if (!btn || !menu) return;
 
         btn.addEventListener("click", () => {
-          menu.classList.toggle("hidden");
-          const expanded = btn.getAttribute("aria-expanded") === "true";
-          btn.setAttribute("aria-expanded", String(!expanded));
+          const isOpen = btn.classList.toggle("is-open");
+          menu.classList.toggle("hidden", !isOpen);
+          btn.setAttribute("aria-expanded", String(isOpen));
         });
       });
     }
   </script>
 </header>
+
+
+
+
 

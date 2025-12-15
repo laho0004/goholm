@@ -1,14 +1,14 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="Contact">
   <section class="py-80">
     <div class="max-w-[960px] mx-auto">
-      <!-- CENTERED CONTENT COLUMN (matches prototype spacing) -->
+      <!-- CENTERED CONTENT COLUMN -->
       <div class="max-w-[640px] mx-auto">
+
         <!-- INTRO -->
         <section class="max-w-[420px] mb-40">
           <h2 class="tracking-[0.25em] mb-8">Contact us</h2>
@@ -23,74 +23,54 @@ import Link from "../components/Link.astro";
 
         <!-- FORM -->
         <form class="w-full mb-80">
-          <!-- NAME + PHONE -->
           <div class="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16 mb-16">
             <div>
-              <label
-                for="name"
-                class="block uppercase text-[10px] tracking-[0.25em] mb-8"
-              >
+              <label class="block uppercase text-[10px] tracking-[0.25em] mb-8">
                 Name
               </label>
               <input
-                id="name"
                 type="text"
                 class="w-full border-b border-[0.5px] border-manor-red-500 bg-transparent py-2 focus:outline-none"
               />
             </div>
 
             <div>
-              <label
-                for="phone"
-                class="block uppercase text-[10px] tracking-[0.25em] mb-8"
-              >
+              <label class="block uppercase text-[10px] tracking-[0.25em] mb-8">
                 Phone
               </label>
               <input
-                id="phone"
                 type="text"
                 class="w-full border-b border-[0.5px] border-manor-red-500 bg-transparent py-2 focus:outline-none"
               />
             </div>
           </div>
 
-          <!-- EMAIL -->
           <div class="mb-16">
-            <label
-              for="mail"
-              class="block uppercase text-[10px] tracking-[0.25em] mb-8"
-            >
+            <label class="block uppercase text-[10px] tracking-[0.25em] mb-8">
               Email*
             </label>
             <input
-              id="mail"
               type="email"
               class="w-full border-b border-[0.5px] border-manor-red-500 bg-transparent py-2 focus:outline-none"
             />
           </div>
 
-          <!-- MESSAGE -->
           <div class="mb-24">
-            <label
-              for="message"
-              class="block uppercase text-[10px] tracking-[0.25em] mb-8"
-            >
+            <label class="block uppercase text-[10px] tracking-[0.25em] mb-8">
               Message*
             </label>
             <textarea
-              id="message"
               rows="3"
               class="w-full border-b border-[0.5px] border-manor-red-500 bg-transparent py-2 resize-none focus:outline-none"
             ></textarea>
           </div>
 
-          <!-- SUBMIT -->
           <div class="flex justify-center">
             <Button />
           </div>
         </form>
 
-        <!-- DIRECTIONS (CENTERED) -->
+        <!-- DIRECTIONS -->
         <section class="max-w-[420px] mx-auto text-center">
           <h2 class="tracking-[0.25em] mb-16">Directions</h2>
 
@@ -99,17 +79,23 @@ import Link from "../components/Link.astro";
             strategically situated on the Gö Peninsula along the Blekinge coast.
           </p>
 
-          <div class="mt-32 flex justify-center">
-            <Link
-              title="CLICK HERE FOR DIRECTIONS"
+          <!-- H3 LINK -->
+          <h3 class="mt-32 tracking-[0.25em] uppercase">
+            <a
               href="https://www.google.com/maps/place/G%C3%B6holms+House,+372+94+Listerby,+Sverige/@56.1533277,15.3286061,17z"
-            />
-          </div>
+              target="_blank"
+              class="underline underline-offset-6 hover:opacity-70 transition"
+            >
+              CLICK HERE FOR DIRECTIONS
+            </a>
+          </h3>
         </section>
+
       </div>
     </div>
   </section>
 </MainLayout>
+
 
 
 
