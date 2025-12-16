@@ -45,6 +45,13 @@
     color: #481619;
   }
 
+  p.caption {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    line-height: 16px;
+    opacity: 0.75;
+  }
+
   /* MOBIL-TILPASNINGER */
   @media (max-width: 768px) {
     h1 {

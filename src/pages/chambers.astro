@@ -23,46 +23,44 @@ import ChamberImg19 from "../assets/images/chambers/4x5/göholm_chamber9_01.webp
 
 <MainLayout title="Chambers">
   <section class="py-80">
-    <div class="max-w-[960px] mx-auto">
+    <!-- Samme bredde som før -->
+    <div class="max-w-[960px] mx-auto flex flex-col gap-112">
 
-      <!-- CHAMBER 01: IMAGES -->
-      <div class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-32 items-start mb-32">
-        <div class="aspect-[4/5]">
-          <img
-            src={ChamberImg1.src}
-            alt="Chamber 01 - image 1"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
+      <!-- ========================= CHAMBER 01 ========================= -->
+      <article class="flex flex-col gap-32">
+        <div class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
+          <div class="aspect-[4/5] md:col-span-6">
+            <img src={ChamberImg1.src} alt="Chamber 01 - image 1" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="aspect-[4/5] md:col-span-4 md:col-start-9 md:mt-32">
+            <img src={ChamberImg2.src} alt="Chamber 01 - image 2" class="w-full h-full object-cover" loading="lazy" />
+          </div>
         </div>
 
-        <div class="aspect-[4/5] md:mt-32">
-          <img
-            src={ChamberImg2.src}
-            alt="Chamber 01 - image 2"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <!-- CHAMBER 01: TEXT -->
-      <div class="max-w-[420px] mb-80">
-        <h1 class="mb-16">Chamber</h1>
-        <h2 class="mb-32 text-[12px] tracking-[0.25em]">01</h2>
-        <p>
-          A serene double room furnished with original antiques and refined
-          details. Soft patterned walls echo the manor’s history and create a
-          quiet atmosphere. The en-suite bathroom adds comfort and ease to an
-          interior shaped by craftsmanship, character and time.
-        </p>
-      </div>
-
-      <!-- CHAMBER 02: TEXT LEFT + IMAGE RIGHT -->
-      <div class="grid md:grid-cols-2 gap-32 items-start mb-80">
-        <div class="max-w-[420px]">
+        <div class="w-full max-w-[420px]">
           <h1 class="mb-16">Chamber</h1>
-          <h2 class="mb-32 text-[12px] tracking-[0.25em]">02</h2>
+          <h2 class="tracking-[0.25em] mb-32">01</h2>
+          <p>A serene double room furnished with original antiques and refined details. Soft patterned walls echo the manor’s history and create a quiet atmosphere. The en-suite bathroom adds comfort and ease to an interior shaped by craftsmanship, character and time.</p>
+        </div>
+      </article>
+
+      <!-- ========================= CHAMBER 02 ========================= -->
+      <article class="flex flex-col gap-32">
+        <div class="grid grid-cols-1 gap-32 md:grid-cols-3 md:gap-x-1 items-start">
+          <div class="aspect-[4/5]">
+            <img src={ChamberImg3.src} alt="Chamber 02 - image 1" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="aspect-[4/5]">
+            <img src={ChamberImg4.src} alt="Chamber 02 - image 2" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="aspect-[4/5]">
+            <img src={ChamberImg5.src} alt="Chamber 02 - image 3" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="w-full max-w-[420px]">
+          <h1 class="mb-16">Chamber</h1>
+          <h2 class="tracking-[0.25em] mb-32">02</h2>
           <p>
             Warm gold accents and a generous double bed create a quietly luxurious
             atmosphere. The room blends traditional detailing with contemporary
@@ -70,274 +68,151 @@ import ChamberImg19 from "../assets/images/chambers/4x5/göholm_chamber9_01.webp
             sense of privacy throughout the stay.
           </p>
         </div>
+      </article>
 
-        <div class="max-w-[420px] justify-self-end">
+      <!-- ========================= CHAMBER 03 ========================= -->
+      <article class="flex flex-col gap-32">
+        <div class="grid grid-cols-1 gap-32 md:grid-cols-2 md:gap-x-1 items-start">
           <div class="aspect-[4/5]">
-            <img
-              src={ChamberImg3.src}
-              alt="Chamber 02 - image 1"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+            <img src={ChamberImg6.src} alt="Chamber 03 - image 1" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="aspect-[4/5]">
+            <img src={ChamberImg7.src} alt="Chamber 03 - image 2" class="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
-      </div>
 
-      <!-- CHAMBER 02: IMAGES -->
-      <div class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-32 items-start mb-80">
-        <div class="aspect-[4/5]">
-          <img
-            src={ChamberImg4.src}
-            alt="Chamber 02 - image 2"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="aspect-[4/5] md:mt-32">
-          <img
-            src={ChamberImg5.src}
-            alt="Chamber 02 - image 3"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <!-- CHAMBER 03: TWO IMAGES -->
-      <div class="grid md:grid-cols-2 gap-32 items-start mb-32">
-        <div class="aspect-[4/5]">
-          <img
-            src={ChamberImg6.src}
-            alt="Chamber 03 - image 1"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="aspect-[4/5]">
-          <img
-            src={ChamberImg7.src}
-            alt="Chamber 03 - image 2"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <!-- CHAMBER 03: TEXT -->
-      <div class="max-w-[420px] mb-80">
-        <h1 class="mb-16">Chamber</h1>
-        <h2 class="mb-32 text-[12px] tracking-[0.25em]">03</h2>
-        <p>
-          A flexible room with the option of either a double bed or two singles,
-          framed by classic blue walls. Gentle light and thoughtful design make it
-          ideal for friends or colleagues, and the private bathroom completes a
-          stay with comfort and ease. Peaceful views add to the sense of calm.
-        </p>
-      </div>
-
-      <!-- CHAMBER 04: IMAGES -->
-      <div class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-32 items-start mb-32">
-        <div class="aspect-[4/5]">
-          <img
-            src={ChamberImg8.src}
-            alt="Chamber 04 - image 1"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="aspect-[4/5] md:mt-32">
-          <img
-            src={ChamberImg9.src}
-            alt="Chamber 04 - image 2"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <!-- CHAMBER 04: TEXT -->
-      <div class="max-w-[420px] mb-80">
-        <h1 class="mb-16">Chamber</h1>
-        <h2 class="mb-32 text-[12px] tracking-[0.25em]">04</h2>
-        <p>
-          A charming double room dressed in delicate pink tones. With its own
-          bathroom, the space balances intimacy, comfort and the soft romance of
-          historic interiors.
-        </p>
-      </div>
-
-      <!-- CHAMBER 05: TWO IMAGES -->
-      <div class="grid md:grid-cols-2 gap-32 items-start mb-32">
-        <div class="aspect-[4/5]">
-          <img
-            src={ChamberImg10.src}
-            alt="Chamber 05 - image 1"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="aspect-[4/5]">
-          <img
-            src={ChamberImg11.src}
-            alt="Chamber 05 - image 2"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <!-- CHAMBER 05: TEXT -->
-      <div class="max-w-[420px] mb-80">
-        <h1 class="mb-16">Chamber</h1>
-        <h2 class="mb-32 text-[12px] tracking-[0.25em]">05</h2>
-        <p>
-          Elegant and welcoming, this double room features refined rosy hues and
-          antique details. It offers an en-suite bathroom and a soothing
-          atmosphere that speaks to the manor’s timeless aesthetic and quiet
-          sense of luxury.
-        </p>
-      </div>
-
-      <!-- CHAMBER 06: TEXT LEFT + IMAGE RIGHT -->
-      <div class="grid md:grid-cols-2 gap-32 items-start mb-80">
-        <div class="max-w-[420px]">
+        <div class="w-full max-w-[420px]">
           <h1 class="mb-16">Chamber</h1>
-          <h2 class="mb-32 text-[12px] tracking-[0.25em]">06</h2>
-          <p>
-            A spacious double room adorned with elegant floral wallpaper and soft
-            daylight. With a generous en-suite bathroom and a beautiful view over
-            the grand avenue and arrival drive, this room offers both comfort and
-            a sense of arrival at the manor.
-          </p>
+          <h2 class="tracking-[0.25em] mb-32">03</h2>
+          <p>A flexible room with the option of either a double bed or two singles, framed by classic blue walls. Gentle light and thoughtful design make it ideal for friends or colleagues, and the private bathroom completes a stay with comfort and ease. Peaceful views add to the sense of calm.</p>
         </div>
+      </article>
 
-        <div class="max-w-[420px] justify-self-end">
-          <div class="aspect-[4/5]">
-            <img
-              src={ChamberImg12.src}
-              alt="Chamber 06 - image 1"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+      <!-- ========================= CHAMBER 04 ========================= -->
+      <article class="flex flex-col gap-32">
+        <div class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
+          <div class="aspect-[4/5] md:col-span-6">
+            <img src={ChamberImg8.src} alt="Chamber 04 - image 1" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="aspect-[4/5] md:col-span-4 md:col-start-9 md:mt-32">
+            <img src={ChamberImg9.src} alt="Chamber 04 - image 2" class="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
-      </div>
 
-      <!-- CHAMBER 06: IMAGES -->
-      <div class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-32 items-start mb-80">
-        <div class="aspect-[4/5]">
-          <img
-            src={ChamberImg14.src}
-            alt="Chamber 06 - image 2"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="aspect-[4/5] md:mt-32">
-          <img
-            src={ChamberImg13.src}
-            alt="Chamber 06 - image 3"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <!-- CHAMBER 07: IMAGE LEFT + TEXT RIGHT -->
-      <div class="grid md:grid-cols-2 gap-32 items-stretch mb-80">
-        <div class="aspect-[4/5]">
-          <img
-            src={ChamberImg15.src}
-            alt="Chamber 07 - image 1"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="flex flex-col justify-end max-w-[420px]">
+        <div class="w-full max-w-[420px]">
           <h1 class="mb-16">Chamber</h1>
-          <h2 class="mb-32 text-[12px] tracking-[0.25em]">07</h2>
-          <p>
-            A cosy and practical single room with its own private bathroom. Ideal
-            for members who value calm and convenience. Though modest in size, it
-            offers warmth, privacy and everything needed for a comfortable stay.
-          </p>
+          <h2 class="tracking-[0.25em] mb-32">04</h2>
+          <p>A charming double room dressed in delicate pink tones. With its own bathroom, the space balances intimacy, comfort and the soft romance of historic interiors.</p>
         </div>
-      </div>
+      </article>
 
-      <!-- CHAMBER 08: TEXT LEFT + IMAGE RIGHT -->
-      <div class="grid md:grid-cols-2 gap-32 items-start mb-80">
-        <div class="max-w-[420px]">
-          <h1 class="mb-16">Chamber</h1>
-          <h2 class="mb-32 text-[12px] tracking-[0.25em]">08</h2>
-          <p>
-            A peaceful double room in neutral tones, designed for restful nights
-            and slow mornings. Its refined simplicity creates a welcoming
-            atmosphere, while the private bathroom ensures comfort and ease
-            throughout the visit.
-          </p>
-        </div>
-
-        <div class="max-w-[420px] justify-self-end">
+      <!-- ========================= CHAMBER 05 ========================= -->
+      <article class="flex flex-col gap-32">
+        <div class="grid grid-cols-1 gap-32 md:grid-cols-2 md:gap-x-1 items-start">
           <div class="aspect-[4/5]">
-            <img
-              src={ChamberImg16.src}
-              alt="Chamber 08 - image 1"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+            <img src={ChamberImg10.src} alt="Chamber 05 - image 1" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="aspect-[4/5]">
+            <img src={ChamberImg11.src} alt="Chamber 05 - image 2" class="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
-      </div>
 
-      <!-- CHAMBER 08: IMAGES -->
-      <div class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-32 items-start mb-80">
-        <div class="aspect-[4/5]">
-          <img
-            src={ChamberImg17.src}
-            alt="Chamber 08 - image 2"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="aspect-[4/5] md:mt-32">
-          <img
-            src={ChamberImg18.src}
-            alt="Chamber 08 - image 3"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-      <!-- CHAMBER 09: IMAGE LEFT + TEXT RIGHT -->
-      <div class="grid md:grid-cols-2 gap-32 items-stretch mb-80">
-        <div class="aspect-[4/5]">
-          <img
-            src={ChamberImg19.src}
-            alt="Chamber 09 - image 1"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-
-        <div class="flex flex-col justify-end max-w-[420px]">
+        <div class="w-full max-w-[420px]">
           <h1 class="mb-16">Chamber</h1>
-          <h2 class="mb-32 text-[12px] tracking-[0.25em]">09</h2>
-          <p>
-            A comfortable double room furnished with beautiful original pieces
-            from the manor’s historic collection. Soft colours and timeless
-            details create a warm, authentic atmosphere. The private bathroom
-            ensures a relaxing and effortless stay.
-          </p>
+          <h2 class="tracking-[0.25em] mb-32">05</h2>
+          <p>Elegant and welcoming, this double room features refined rosy hues and antique details. It offers an en-suite bathroom and a soothing atmosphere that speaks to the manor’s timeless aesthetic and quiet sense of luxury.</p>
         </div>
-      </div>
+      </article>
+
+      <!-- ========================= CHAMBER 06 (mere kompakt) ========================= -->
+      <article class="flex flex-col gap-32">
+        <!-- TOP: tekst + hovedbillede -->
+        <div class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
+          <div class="w-full max-w-[420px] md:col-span-4 md:mt-32">
+            <h1 class="mb-16">Chamber</h1>
+            <h2 class="tracking-[0.25em] mb-32">06</h2>
+            <p>
+              A spacious double room adorned with elegant floral wallpaper and soft daylight.
+              With a generous en-suite bathroom and a beautiful view over the grand avenue and arrival drive,
+              this room offers both comfort and a sense of arrival at the manor.
+            </p>
+          </div>
+
+          <div class="aspect-[4/5] md:col-span-4 md:col-start-9 md:mt-32">
+            <img src={ChamberImg12.src} alt="Chamber 06 - image 1" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- BUND: de 2 sidste billeder på samme række (smallere => mindre scroll) -->
+        <div class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
+          <div class="aspect-[4/5] md:col-span-4">
+            <img src={ChamberImg13.src} alt="Chamber 06 - image 2" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+
+          <div class="aspect-[4/5] md:col-span-4 md:col-start-7 md:mt-32">
+            <img src={ChamberImg14.src} alt="Chamber 06 - image 3" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+      </article>
+
+      <!-- ========================= CHAMBER 07 ========================= -->
+      <article class="flex flex-col gap-32">
+        <div class="grid grid-cols-1 gap-40 md:grid-cols-12 md:gap-x-40 items-start">
+          <div class="aspect-[4/5] md:col-span-6">
+            <img src={ChamberImg15.src} alt="Chamber 07 - image 1" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+
+          <div class="w-full max-w-[420px] md:col-span-4 md:col-start-7 md:self-end">
+            <h1 class="mb-16">Chamber</h1>
+            <h2 class="tracking-[0.25em] mb-32">07</h2>
+            <p>
+              A cosy and practical single room with its own private bathroom. Ideal
+              for members who value calm and convenience. Though modest in size, it
+              offers warmth, privacy and everything needed for a comfortable stay.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========================= CHAMBER 08 ========================= -->
+      <article class="flex flex-col gap-32">
+        <div class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
+          <div class="w-full max-w-[420px] md:col-span-4 md:mt-32">
+            <h1 class="mb-16">Chamber</h1>
+            <h2 class="tracking-[0.25em] mb-32">08</h2>
+            <p>A peaceful double room in neutral tones, designed for restful nights and slow mornings. Its refined simplicity creates a welcoming atmosphere, while the private bathroom ensures comfort and ease throughout the visit.</p>
+          </div>
+          <div class="aspect-[4/5] md:col-span-4 md:col-start-9 md:mt-32">
+            <img src={ChamberImg16.src} alt="Chamber 08 - image 1" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-32 md:grid-cols-2 md:gap-x-1 items-start">
+          <div class="aspect-[4/5]">
+            <img src={ChamberImg17.src} alt="Chamber 08 - image 2" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div class="aspect-[4/5] md:mt-32">
+            <img src={ChamberImg18.src} alt="Chamber 08 - image 3" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+      </article>
+
+      <!-- ========================= CHAMBER 09 ========================= -->
+      <article class="flex flex-col gap-32">
+        <div class="grid grid-cols-1 gap-40 md:grid-cols-12 md:gap-x-40 items-start">
+          <div class="aspect-[4/5] md:col-span-6 md:col-start-1">
+            <img src={ChamberImg19.src} alt="Chamber 09 - image 1" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+
+          <div class="w-full max-w-[420px] md:col-span-4 md:col-start-7">
+            <h1 class="mb-16">Chamber</h1>
+            <h2 class="tracking-[0.25em] mb-32">09</h2>
+            <p>
+              A comfortable double room furnished with beautiful original pieces from the manor’s historic collection. Soft colours and timeless details create a warm, authentic atmosphere. The private bathroom ensures a relaxing and effortless stay.
+            </p>
+          </div>
+        </div>
+      </article>
 
     </div>
   </section>

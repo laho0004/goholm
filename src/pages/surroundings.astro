@@ -1,339 +1,345 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import surroundingsImg1 from "../assets/images/surroundings/5x7/göholm_surroundings_01.webp";
-import cookingImg1 from "../assets/images/surroundings/5x7/göholm_cooking_01.webp";
-import cookingImg2 from "../assets/images/surroundings/5x7/göholm_cooking_02.webp";
-import cookingImg3 from "../assets/images/surroundings/5x7/göholm_cooking_03.webp";
-import cookingImg4 from "../assets/images/surroundings/7x5/göholm_cooking_04.webp";
-import landscapeImg2 from "../assets/images/surroundings/4x5/göholm_landscape_02.webp";
-import landscapeImg4 from "../assets/images/surroundings/5x7/göholm_landscape_04.webp";
-import landscapeImg5 from "../assets/images/surroundings/4x5/göholm_landscape_05.webp";
-import landscapeImg6 from "../assets/images/surroundings/5x7/göholm_landscape_06.webp";
-import fishingImg1 from "../assets/images/surroundings/4x5/göholm_fishing_01.webp";
-import fishingImg2 from "../assets/images/surroundings/4x5/göholm_fishing_02.webp";
-import fishingImg3 from "../assets/images/surroundings/5x7/göholm_fishing_03.webp";
-import fishingImg4 from "../assets/images/surroundings/7x5/göholm_fishing_04.webp";
+import cookingImg1 from "../assets/images/surroundings/5x7/göholm_cooking_01.webp";
+import cookingImg2 from "../assets/images/surroundings/5x7/göholm_cooking_02.webp";
+import cookingImg3 from "../assets/images/surroundings/5x7/göholm_cooking_03.webp";
+import cookingImg4 from "../assets/images/surroundings/7x5/göholm_cooking_04.webp";
+import landscapeImg2 from "../assets/images/surroundings/4x5/göholm_landscape_02.webp";
+import landscapeImg4 from "../assets/images/surroundings/5x7/göholm_landscape_04.webp";
+import landscapeImg5 from "../assets/images/surroundings/4x5/göholm_landscape_05.webp";
+import landscapeImg6 from "../assets/images/surroundings/5x7/göholm_landscape_06.webp";
+import fishingImg1 from "../assets/images/surroundings/4x5/göholm_fishing_01.webp";
+import fishingImg2 from "../assets/images/surroundings/4x5/göholm_fishing_02.webp";
+import fishingImg3 from "../assets/images/surroundings/5x7/göholm_fishing_03.webp";
+import fishingImg4 from "../assets/images/surroundings/7x5/göholm_fishing_04.webp";
 ---
 
 <MainLayout title="Surroundings">
   <section class="py-80">
     <div class="max-w-[960px] mx-auto">
-      <!-- HERO -->
-      <div class="mb-80">
-        <div class="aspect-[5/7]">
-          <img
-            src={surroundingsImg1.src}
-            alt="Göholm surroundings"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
 
-      <!-- TITLE + SUBTITLE + TEXT -->
-      <div class="mb-80">
-        <h1 class="mb-32">Surroundings</h1>
-        <h3 class="mb-16">the nature at Göholm</h3>
+      <!-- ========================= INTRO (Skall-style) ========================= -->
+    <section class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-end">
+  
+  <!-- LEFT: Title block (bundjusteret) -->
+  <div class="md:col-span-4 self-end">
+    <h1 class="mb-16">Surroundings</h1>
+    <h3>the nature at Göholm</h3>
+  </div>
 
-        <div class="grid md:grid-cols-2 gap-32">
-          <p>
-            Göholm is surrounded by open fields where cattle graze slowly through
-            the seasons — a living part of the estate’s agricultural heritage.
-            The manor lies just ten kilometres south of Ronneby, set within a
-            landscape that stretches across 733 hectares.
-          </p>
+  <!-- RIGHT: Hero image -->
+  <div class="md:col-span-7 md:col-start-6">
+    <div class="aspect-[5/7]">
+      <img
+        src={surroundingsImg1.src}
+        alt="Göholm surroundings"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+    </div>
 
-          <p>
-            These pastures and forests shape the rhythm of everyday life at Göholm
-            — peaceful, grounded and guided by nature. The grazing cattle, the
-            shifting light over the fields and the vastness.
-          </p>
-        </div>
-      </div>
+    </section>
 
-      <!-- OUTDOOR COOKING: IMAGE LEFT + TEXT RIGHT (TEXT BOTTOM-ALIGNED) -->
-      <div class="grid md:grid-cols-2 gap-32 items-stretch mb-80">
-        <!-- Left image -->
-        <div class="aspect-[4/5]">
-          <img
-            src={cookingImg1.src}
-            alt="Outdoor Cooking Göholm"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
 
-        <!-- Right text (bottom aligned) -->
-        <div class="flex flex-col justify-end max-w-[420px]">
-          <h2 class="mb-16">Outdoor Cooking</h2>
+<!-- INTRO TEXT: TWO COLUMNS -->
+<div class="mt-80 grid grid-cols-1 gap-32 md:grid-cols-2">
+  <p>
+    Göholm is surrounded by open fields where cattle graze slowly through
+    the seasons — a living part of the estate’s agricultural heritage.
+    The manor lies just ten kilometres south of Ronneby, set within a
+    landscape that stretches across 733 hectares.
+  </p>
 
-          <p class="mb-16">
-            With a short UTV ride, you reach one of Göholm’s most beautiful
-            viewpoints – an open plateau overlooking the sea, the forest and the
-            surrounding rock formations. Here, a simple and functional fire pit
-            allows guests to cook meals over open flames.
-          </p>
+  <p>
+    These pastures and forests shape the rhythm of everyday life at Göholm
+    — peaceful, grounded and guided by nature. The grazing cattle, the
+    shifting light over the fields and the vastness.
+  </p>
+</div>
 
-          <p class="mb-16">
-            On warm days, the area feels bright and expansive, while in winter it
-            offers snow, frost and clear horizons, with the fire providing a
-            natural gathering point.
-          </p>
 
-          <p>
-            It’s a place to meet, share a meal, enjoy the view and become part of
-            the landscape – with nothing but nature and the glow of the fire as
-            the setting.
-          </p>
-        </div>
-      </div>
 
-      <!-- TWO IMAGES SIDE BY SIDE + CAPTION UNDER RIGHT -->
-      <div class="grid md:grid-cols-2 gap-32 items-start mb-80">
-        <!-- Left image -->
-        <div class="aspect-[5/7]">
-          <img
-            src={cookingImg2.src}
-            alt="Outdoor Cooking Göholm - UTV"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
+      <!-- ========================= CONTENT (same rules as Chambers) ========================= -->
+      <div class="mt-112 flex flex-col gap-112">
 
-        <!-- Right image + caption -->
-        <div>
+        <!-- OUTDOOR COOKING: IMAGE LEFT + TEXT RIGHT (TEXT BOTTOM-ALIGNED) -->
+        <article class="grid grid-cols-1 gap-32 md:grid-cols-2 md:gap-x-32 items-stretch">
+          <div class="aspect-[4/5]">
+            <img
+              src={cookingImg1.src}
+              alt="Outdoor Cooking Göholm"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="flex flex-col justify-end w-full max-w-[420px]">
+            <h2 class="mb-16">Outdoor Cooking</h2>
+
+            <p class="mb-16">
+              With a short UTV ride, you reach one of Göholm’s most beautiful
+              viewpoints – an open plateau overlooking the sea, the forest and the
+              surrounding rock formations. Here, a simple and functional fire pit
+              allows guests to cook meals over open flames.
+            </p>
+
+            <p class="mb-16">
+              On warm days, the area feels bright and expansive, while in winter it
+              offers snow, frost and clear horizons, with the fire providing a
+              natural gathering point.
+            </p>
+
+            <p>
+              It’s a place to meet, share a meal, enjoy the view and become part of
+              the landscape – with nothing but nature and the glow of the fire as
+              the setting.
+            </p>
+          </div>
+        </article>
+
+        <!-- TWO IMAGES SIDE BY SIDE (hairline gap) + CAPTION UNDER RIGHT -->
+        <article class="grid grid-cols-1 gap-32 md:grid-cols-2 md:gap-x-1 items-start">
           <div class="aspect-[5/7]">
             <img
-              src={cookingImg3.src}
-              alt="Outdoor Cooking Göholm - bonfire"
+              src={cookingImg2.src}
+              alt="Outdoor Cooking Göholm - UTV"
               class="w-full h-full object-cover"
               loading="lazy"
             />
           </div>
 
-          <p class="mt-16 max-w-[420px]">
-            In the October season, it offers a modest way to be outdoors, close
-            to nature, with the fire at the centre of it all.
-          </p>
-        </div>
-      </div>
-
-      <!-- CENTERED COOKING + CAPTION -->
-      <div class="max-w-[640px] mx-auto mb-80">
-        <div class="aspect-[7/5]">
-          <img
-            src={cookingImg4.src}
-            alt="Outdoor Cooking Göholm - winter spot"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-
-        <p class="mt-16 max-w-[420px]">
-          A quiet winter spot where the landscape opens toward the sea and the air
-          feels crisp and clear.
-        </p>
-      </div>
-
-      <!-- IMAGE LEFT + VIDEO RIGHT -->
-      <div
-        class="grid md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] gap-32 items-start mb-80"
-      >
-        <!-- Left: smaller image + caption -->
-        <div class="md:mt-32 max-w-[420px]">
-          <div class="aspect-[4/5]">
-            <img
-              src={landscapeImg2.src}
-              alt="Cow landscape at Göholm"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-
-          <p class="mt-16">
-            The beautiful fields surrounding the estate.
-          </p>
-        </div>
-
-        <!-- Right: large video -->
-        <div class="aspect-[4/5] overflow-hidden">
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            preload="metadata"
-            class="w-full h-full object-cover"
-          >
-            <source src="/videos/goholm_landscape_03.mp4" type="video/mp4" />
-          </video>
-        </div>
-      </div>
-
-     <!-- LANDSCAPE: IMAGE LEFT + TEXT RIGHT -->
-<div class="grid md:grid-cols-2 gap-32 items-stretch mb-80">
-  <!-- Left image -->
-  <div class="aspect-[4/5]">
+          <div>
+  <div class="aspect-[5/7]">
     <img
-      src={landscapeImg4.src}
-      alt="Landscape at Göholm"
+      src={cookingImg3.src}
+      alt="Outdoor Cooking Göholm - bonfire"
       class="w-full h-full object-cover"
       loading="lazy"
     />
   </div>
 
-  <!-- Right text (VERTICALLY CENTERED) -->
-  <div class="flex flex-col justify-center max-w-[420px]">
-    <h2 class="mb-16">Landscape</h2>
-
-    <p class="mb-16">
-      Göholm’s landscape invites exploration, from soft forest paths beneath
-      birch and oak to open clearings where the light moves gently across
-      the ground. Walk, hike or simply wander at your own pace, moving
-      through woodland, open pastures and toward the nearby coastline.
-    </p>
-
-    <p>
-      The area offers shifting views, grazing animals and quiet places to
-      pause along the way, creating a calm and natural sense of connection
-      to the surroundings.
-    </p>
-  </div>
+  <p class="caption mt-2 w-full max-w-[420px]">
+    In the October season, it offers a modest way to be outdoors, close
+    to nature, with the fire at the centre of it all.
+  </p>
 </div>
 
-      <!-- IMAGE LEFT + IMAGE RIGHT -->
-      <div
-        class="grid md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] gap-32 items-start mb-80"
-      >
-        <!-- Left: smaller image -->
-        <div class="md:mt-32 max-w-[420px]">
-          <div class="aspect-[4/5]">
-            <img
-              src={landscapeImg5.src}
-              alt="Sheep in front of house"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-        </div>
+        </article>
 
-        <!-- Right: large image -->
-        <div class="aspect-[5/7]">
-          <img
-            src={landscapeImg6.src}
-            alt="Red house Göholm surroundings"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
-       <!-- IMAGE LEFT + IMAGE RIGHT -->
-     <!-- FISHING: TWO IMAGES SIDE BY SIDE + CAPTION UNDER RIGHT -->
-<div class="grid md:grid-cols-2 gap-32 items-start mb-80">
-
-  <!-- Left image -->
-  <div class="max-w-[420px]">
-    <div class="aspect-[4/5]">
-      <img
-        src={fishingImg1.src}
-        alt="View over the lake"
-        class="w-full h-full object-cover"
-        loading="lazy"
-      />
-    </div>
-  </div>
-
-  <!-- Right image + caption -->
-  <div class="max-w-[420px]">
-    <div class="aspect-[4/5]">
-      <img
-        src={fishingImg2.src}
-        alt="On the way to go fishing"
-        class="w-full h-full object-cover"
-        loading="lazy"
-      />
-    </div>
-
-    <p class="mt-16">
-      The property’s lake for summer swims and peaceful fishing.
-    </p>
-  </div>
-</div>
-<!-- FISHING: IMAGE LEFT + TEXT RIGHT -->
-<div class="grid md:grid-cols-2 gap-32 items-stretch mb-80">
-  <!-- Left image -->
-  <div class="aspect-[4/5]">
+   <!-- CENTERED COOKING + CAPTION -->
+<article class="max-w-[640px] mx-auto mb-32">
+  <div class="aspect-[7/5]">
     <img
-      src={fishingImg3.src}
-      alt="Fishing at Göholm"
+      src={cookingImg4.src}
+      alt="Outdoor Cooking Göholm - winter spot"
       class="w-full h-full object-cover"
       loading="lazy"
     />
   </div>
 
-  <!-- Right text (VERTICALLY CENTERED) -->
-  <div class="flex flex-col justify-center max-w-[420px]">
-    <h2 class="mb-16">Fishing</h2>
+  <p class="caption mt-8 w-full max-w-[420px]">
+    A quiet winter spot where the landscape opens toward the sea and the air
+    feels crisp and clear.
+  </p>
+</article>
 
-    <p class="mb-16">
-      Göholm is surrounded by oak forests, open landscapes and walking trails that lead into the Gö nature reserve.
-      Here, fishing becomes a quiet ritual — early mornings with stillness over the water or soft evening light settling across the horizon.
-    </p>
-
-    <p>
-      Regardless of experience, guests can enjoy the simple calm of casting a line in peaceful, untouched surroundings.
-    </p>
-  </div>
-</div>
-
-      <!-- CENTERED FISHING SPOT  -->
-      <div class="max-w-[640px] mx-auto mb-80">
-        <div class="aspect-[7/5]">
-          <img
-            src={fishingImg4.src}
-            alt="Fishing at Göholm - winter "
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </div>
-      </div>
-
-    <!-- LIST -->
-    <div class="space-y-32">
-
-      <div>
-        <h2 class="mb-16">APR – OCT &nbsp;&nbsp; FISHING</h2>
-        <div class="border-t border-manor-red-500"></div>
-      </div>
-
-      <div>
-        <h2 class="mb-16">SEP – FEB &nbsp;&nbsp; HUNTING SEASON</h2>
-        <div class="border-t border-manor-red-500"></div>
-      </div>
-
-      <div>
-        <h2 class="mb-8">MAY – OCT &nbsp;&nbsp; GOLF</h2>
-        <p class="mb-16">
-          (courses open, best conditions June–Sep)
-        </p>
-        <div class="border-t border-manor-red-500"></div>
-      </div>
-
-      <div>
-        <h2 class="mb-16">APR – NOV &nbsp;&nbsp; UTV / ATV RIDING</h2>
-        <div class="border-t border-manor-red-500"></div>
-      </div>
-
-      <div>
-        <h2 class="mb-8">YEAR – ROUND &nbsp;&nbsp;OUTDOOR ADVENTURES</h2>
-        <p class="mb-16">
-          (Hiking, exploring forests, coastline activities)
-        </p>
-        <div class="border-t border-manor-red-500"></div>
-      </div>
-
-    </div>
+<!-- LARGE LANDSCAPE VIDEO -->
+<section class="w-full mb-32">
+  <div class="aspect-[16/9]">
+    <video
+      src="/videos/goholm_landscape_01.mp4"
+      class="w-full h-full object-cover"
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
   </div>
 </section>
 
+
+        <!-- IMAGE LEFT + VIDEO RIGHT -->
+        <article class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
+          <div class="md:col-span-4 md:mt-32 w-full max-w-[420px]">
+            <div class="aspect-[4/5]">
+              <img
+                src={landscapeImg2.src}
+                alt="Cow landscape at Göholm"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            <p class="caption mt-2 w-full max-w-[420px]">
+              The beautiful fields surrounding the estate.
+            </p>
+          </div>
+
+          <div class="aspect-[4/5] overflow-hidden md:col-span-7 md:col-start-6">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              class="w-full h-full object-cover"
+            >
+              <source src="/videos/goholm_landscape_03.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </article>
+
+        <!-- LANDSCAPE: IMAGE LEFT + TEXT RIGHT -->
+        <article class="grid grid-cols-1 gap-32 md:grid-cols-2 md:gap-x-32 items-stretch">
+          <div class="aspect-[4/5]">
+            <img
+              src={landscapeImg4.src}
+              alt="Landscape at Göholm"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center w-full max-w-[420px]">
+            <h2 class="mb-16">Landscape</h2>
+
+            <p class="mb-16">
+              Göholm’s landscape invites exploration, from soft forest paths beneath
+              birch and oak to open clearings where the light moves gently across
+              the ground. Walk, hike or simply wander at your own pace, moving
+              through woodland, open pastures and toward the nearby coastline.
+            </p>
+
+            <p>
+              The area offers shifting views, grazing animals and quiet places to
+              pause along the way, creating a calm and natural sense of connection
+              to the surroundings.
+            </p>
+          </div>
+        </article>
+
+        <!-- IMAGE LEFT + IMAGE RIGHT -->
+        <article class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
+          <div class="md:col-span-4 md:mt-32 w-full max-w-[420px]">
+            <div class="aspect-[4/5]">
+              <img
+                src={landscapeImg5.src}
+                alt="Sheep in front of house"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="aspect-[5/7] md:col-span-7 md:col-start-6">
+            <img
+              src={landscapeImg6.src}
+              alt="Red house Göholm surroundings"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </article>
+
+        <!-- FISHING: TWO IMAGES SIDE BY SIDE + CAPTION UNDER RIGHT (hairline gap) -->
+        <article class="grid grid-cols-1 gap-32 md:grid-cols-2 md:gap-x-1 items-start">
+          <div class="w-full max-w-[420px]">
+            <div class="aspect-[4/5]">
+              <img
+                src={fishingImg1.src}
+                alt="View over the lake"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="w-full max-w-[420px]">
+            <div class="aspect-[4/5]">
+              <img
+                src={fishingImg2.src}
+                alt="On the way to go fishing"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            <p class="caption mt-2 w-full max-w-[420px]">
+              The property’s lake for summer swims and peaceful fishing.
+            </p>
+          </div>
+        </article>
+
+        <!-- FISHING: IMAGE LEFT + TEXT RIGHT -->
+        <article class="grid grid-cols-1 gap-32 md:grid-cols-2 md:gap-x-32 items-stretch">
+          <div class="aspect-[4/5]">
+            <img
+              src={fishingImg3.src}
+              alt="Fishing at Göholm"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="flex flex-col justify-center w-full max-w-[420px]">
+            <h2 class="mb-16">Fishing</h2>
+
+            <p class="mb-16">
+              Göholm is surrounded by oak forests, open landscapes and walking trails that lead into the Gö nature reserve.
+              Here, fishing becomes a quiet ritual — early mornings with stillness over the water or soft evening light settling across the horizon.
+            </p>
+
+            <p>
+              Regardless of experience, guests can enjoy the simple calm of casting a line in peaceful, untouched surroundings.
+            </p>
+          </div>
+        </article>
+
+        <!-- CENTERED FISHING SPOT -->
+        <article class="max-w-[640px] mx-auto">
+          <div class="aspect-[7/5]">
+            <img
+              src={fishingImg4.src}
+              alt="Fishing at Göholm - winter"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </article>
+
+        <!-- LIST -->
+        <article class="space-y-32">
+          <div>
+            <h2 class="mb-16">APR – OCT &nbsp;&nbsp; FISHING</h2>
+            <div class="border-t border-manor-red-500"></div>
+          </div>
+
+          <div>
+            <h2 class="mb-16">SEP – FEB &nbsp;&nbsp; HUNTING SEASON</h2>
+            <div class="border-t border-manor-red-500"></div>
+          </div>
+
+          <div>
+            <h2 class="mb-8">MAY – OCT &nbsp;&nbsp; GOLF</h2>
+            <p class="mb-16">(courses open, best conditions June–Sep)</p>
+            <div class="border-t border-manor-red-500"></div>
+          </div>
+
+          <div>
+            <h2 class="mb-16">APR – NOV &nbsp;&nbsp; UTV / ATV RIDING</h2>
+            <div class="border-t border-manor-red-500"></div>
+          </div>
+
+          <div>
+            <h2 class="mb-8">YEAR – ROUND &nbsp;&nbsp;OUTDOOR ADVENTURES</h2>
+            <p class="mb-16">(Hiking, exploring forests, coastline activities)</p>
+            <div class="border-t border-manor-red-500"></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
 </MainLayout>
