@@ -48,13 +48,13 @@ import ChamberImg19 from "../assets/images/chambers/4x5/göholm_chamber9_01.webp
       <article class="flex flex-col gap-32">
         <div class="grid grid-cols-1 gap-32 md:grid-cols-3 md:gap-x-1 items-start">
           <div class="aspect-[4/5]">
-            <img src={ChamberImg3.src} alt="Chamber 02 - image 1" class="w-full h-full object-cover" loading="lazy" />
+            <img src={ChamberImg5.src} alt="Chamber 02 - image 1" class="w-full h-full object-cover" loading="lazy" />
           </div>
           <div class="aspect-[4/5]">
             <img src={ChamberImg4.src} alt="Chamber 02 - image 2" class="w-full h-full object-cover" loading="lazy" />
           </div>
           <div class="aspect-[4/5]">
-            <img src={ChamberImg5.src} alt="Chamber 02 - image 3" class="w-full h-full object-cover" loading="lazy" />
+            <img src={ChamberImg3.src} alt="Chamber 02 - image 3" class="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
 
@@ -124,35 +124,52 @@ import ChamberImg19 from "../assets/images/chambers/4x5/göholm_chamber9_01.webp
         </div>
       </article>
 
-      <!-- ========================= CHAMBER 06 (mere kompakt) ========================= -->
-      <article class="flex flex-col gap-32">
-        <!-- TOP: tekst + hovedbillede -->
-        <div class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
-          <div class="w-full max-w-[420px] md:col-span-4 md:mt-32">
-            <h1 class="mb-16">Chamber</h1>
-            <h2 class="tracking-[0.25em] mb-32">06</h2>
-            <p>
-              A spacious double room adorned with elegant floral wallpaper and soft daylight.
-              With a generous en-suite bathroom and a beautiful view over the grand avenue and arrival drive,
-              this room offers both comfort and a sense of arrival at the manor.
-            </p>
-          </div>
+<!-- ========================= CHAMBER 06 ========================= -->
+<article class="flex flex-col gap-32">
+  <!-- TOP: tekst + hovedbillede -->
+  <div class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
+    <div class="w-full max-w-[420px] md:col-span-4 md:mt-32">
+      <h1 class="mb-16">Chamber</h1>
+      <h2 class="tracking-[0.25em] mb-32">06</h2>
+      <p>
+        A spacious double room adorned with elegant floral wallpaper and soft daylight.
+        With a generous en-suite bathroom and a beautiful view over the grand avenue and arrival drive,
+        this room offers both comfort and a sense of arrival at the manor.
+      </p>
+    </div>
 
-          <div class="aspect-[4/5] md:col-span-4 md:col-start-9 md:mt-32">
-            <img src={ChamberImg12.src} alt="Chamber 06 - image 1" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-        </div>
+    <div class="aspect-[4/5] md:col-span-4 md:col-start-9 md:mt-32">
+      <img
+        src={ChamberImg12.src}
+        alt="Chamber 06 - image 1"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+  </div>
 
-        <!-- BUND: de 2 sidste billeder på samme række (smallere => mindre scroll) -->
-        <div class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
-          <div class="aspect-[4/5] md:col-span-4">
-            <img src={ChamberImg13.src} alt="Chamber 06 - image 2" class="w-full h-full object-cover" loading="lazy" />
-          </div>
+  <!-- BUND: billeder 13 + 14 (aligned ) -->
+  <div class="grid grid-cols-1 gap-32 md:grid-cols-2 md:gap-x-1 items-start">
+    <div class="aspect-[4/5]">
+      <img
+        src={ChamberImg13.src}
+        alt="Chamber 06 - image 2"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
 
-          <div class="aspect-[4/5] md:col-span-4 md:col-start-7 md:mt-32">
-            <img src={ChamberImg14.src} alt="Chamber 06 - image 3" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-        </div>
+    <div class="aspect-[4/5]">
+      <img
+        src={ChamberImg14.src}
+        alt="Chamber 06 - image 3"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+  </div>
+</article>
+
       </article>
 
       <!-- ========================= CHAMBER 07 ========================= -->
@@ -173,29 +190,54 @@ import ChamberImg19 from "../assets/images/chambers/4x5/göholm_chamber9_01.webp
           </div>
         </div>
       </article>
+<!-- ========================= CHAMBER 08 ========================= -->
+<article class="flex flex-col gap-32">
 
-      <!-- ========================= CHAMBER 08 ========================= -->
-      <article class="flex flex-col gap-32">
-        <div class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
-          <div class="w-full max-w-[420px] md:col-span-4 md:mt-32">
-            <h1 class="mb-16">Chamber</h1>
-            <h2 class="tracking-[0.25em] mb-32">08</h2>
-            <p>A peaceful double room in neutral tones, designed for restful nights and slow mornings. Its refined simplicity creates a welcoming atmosphere, while the private bathroom ensures comfort and ease throughout the visit.</p>
-          </div>
-          <div class="aspect-[4/5] md:col-span-4 md:col-start-9 md:mt-32">
-            <img src={ChamberImg16.src} alt="Chamber 08 - image 1" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-        </div>
+  <!-- TEXT + IMAGE 16 -->
+  <div class="grid grid-cols-1 gap-32 md:grid-cols-12 md:gap-x-32 items-start">
+    <div class="w-full max-w-[420px] md:col-span-4 md:mt-32">
+      <h1 class="mb-16">Chamber</h1>
+      <h2 class="tracking-[0.25em] mb-32">08</h2>
+      <p>
+        A peaceful double room in neutral tones, designed for restful nights and slow mornings.
+        Its refined simplicity creates a welcoming atmosphere, while the private bathroom ensures
+        comfort and ease throughout the visit.
+      </p>
+    </div>
 
-        <div class="grid grid-cols-1 gap-32 md:grid-cols-2 md:gap-x-1 items-start">
-          <div class="aspect-[4/5]">
-            <img src={ChamberImg17.src} alt="Chamber 08 - image 2" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div class="aspect-[4/5] md:mt-32">
-            <img src={ChamberImg18.src} alt="Chamber 08 - image 3" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-        </div>
-      </article>
+    <div class="aspect-[4/5] md:col-span-4 md:col-start-9 md:mt-32">
+      <img
+        src={ChamberImg16.src}
+        alt="Chamber 08 - image 1"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+  </div>
+
+  <!-- IMAGES 17 + 18 (ALIGNED) -->
+  <div class="grid grid-cols-1 gap-32 md:grid-cols-2 md:gap-x-1 items-start">
+    <div class="aspect-[4/5]">
+      <img
+        src={ChamberImg17.src}
+        alt="Chamber 08 - image 2"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="aspect-[4/5]">
+      <img
+        src={ChamberImg18.src}
+        alt="Chamber 08 - image 3"
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </div>
+  </div>
+
+</article>
+
 
       <!-- ========================= CHAMBER 09 ========================= -->
       <article class="flex flex-col gap-32">

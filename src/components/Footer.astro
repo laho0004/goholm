@@ -7,7 +7,7 @@
         <img
           src="/emblem.svg"
           alt="Göholm Emblem"
-          class="block h-32 md:h-36 w-auto"
+          class="block h-32 md:h-36 w-auto emblem"
         />
       </a>
     </div>
@@ -29,21 +29,33 @@
       </a>
     </div>
 
-    <!-- MOBILE -->
-    <div class="md:hidden flex flex-col gap-20">
-      <div class="flex flex-col space-y-12 text-[12px] tracking-[0.15em] uppercase font-serif leading-none">
+    <!-- MOBILE (RET) -->
+    <div class="md:hidden flex justify-between items-center text-[12px]">
+      
+      <!-- Links -->
+      <div class="flex flex-col gap-8 tracking-[0.15em] uppercase font-serif leading-relaxed">
         <a href="#" class="underline hover:opacity-60 transition">Spotify</a>
         <a href="#" class="underline hover:opacity-60 transition">LinkedIn</a>
       </div>
 
-      <div class="text-[12px] font-sans tracking-[0] leading-relaxed">
+      <!-- Address -->
+      <div class="text-right font-sans leading-relaxed">
         <p class="tracking-[0.15em]">Göholm House</p>
         <p>372 94 Listerby, Sverige</p>
       </div>
+
     </div>
 
   </div>
 </footer>
+
+<style>
+.emblem {
+  height: 15vw;
+  max-height: 150px;
+}
+</style>
+
 
 
 

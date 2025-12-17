@@ -6,11 +6,21 @@ import aboutImg2 from "../assets/images/about/4x5/göholm_about_02.webp";
 
 <MainLayout title="Göholm">
   <section class="py-80">
-    <div class="max-w-[960px] mx-auto">
+    <div class="max-w-[960px] mx-auto px-24 md:px-0">
 
       <!-- TOP IMAGES -->
-      <div class="grid md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] gap-32 items-start mb-80">
-        <div class="aspect-[4/5]">
+      <div
+        class="
+          grid grid-cols-1 gap-64 mb-80
+          justify-items-center
+          md:justify-items-stretch
+          md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]
+          md:gap-32
+          md:items-start
+        "
+      >
+        <!-- Image 1 (centered + smaller on mobile, large on desktop) -->
+        <div class="w-full max-w-[520px] md:max-w-none aspect-[4/5] mx-auto md:mx-0">
           <img
             src={aboutImg1.src}
             alt="Göholm exterior"
@@ -19,7 +29,8 @@ import aboutImg2 from "../assets/images/about/4x5/göholm_about_02.webp";
           />
         </div>
 
-        <div class="aspect-[4/5] md:mt-64 max-w-[360px] ml-auto">
+        <!-- Image 2  -->
+        <div class="w-full max-w-[360px] aspect-[4/5] mx-auto md:mx-0 md:mt-64 md:ml-auto">
           <img
             src={aboutImg2.src}
             alt="Göholm details"
@@ -116,7 +127,6 @@ import aboutImg2 from "../assets/images/about/4x5/göholm_about_02.webp";
 
       <!-- FOUR INFO BLOCKS -->
       <div class="grid md:grid-cols-2 gap-x-32 gap-y-64">
-        <!-- 01 -->
         <div class="max-w-[420px]">
           <h2 class="mb-8">The Manor House</h2>
           <h2 class="mb-24">01</h2>
@@ -126,7 +136,6 @@ import aboutImg2 from "../assets/images/about/4x5/göholm_about_02.webp";
           </p>
         </div>
 
-        <!-- 02 -->
         <div class="max-w-[420px] md:justify-self-end">
           <h2 class="mb-8">Accommodation</h2>
           <h2 class="mb-24">02</h2>
@@ -137,7 +146,6 @@ import aboutImg2 from "../assets/images/about/4x5/göholm_about_02.webp";
           </p>
         </div>
 
-        <!-- 03 -->
         <div class="max-w-[420px]">
           <h2 class="mb-8">Experiences</h2>
           <h2 class="mb-24">03</h2>
@@ -147,7 +155,6 @@ import aboutImg2 from "../assets/images/about/4x5/göholm_about_02.webp";
           </p>
         </div>
 
-        <!-- 04 -->
         <div class="max-w-[420px] md:justify-self-end">
           <h2 class="mb-8">Services</h2>
           <h2 class="mb-24">04</h2>
@@ -161,6 +168,7 @@ import aboutImg2 from "../assets/images/about/4x5/göholm_about_02.webp";
     </div>
   </section>
 </MainLayout>
+
 
 
 
